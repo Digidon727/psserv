@@ -1,0 +1,58 @@
+.section {
+  // .section__register
+
+  &__register {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+}
+
+.form {
+  // .form__register
+
+  &__register {
+  }
+
+  // .form__label
+
+  &__label {
+  }
+
+  // .form__text
+
+  &__text {
+  }
+
+  // .form__reg-info
+
+  &__reg-info {
+  }
+
+  // .form__control
+
+  &__control {
+  }
+
+  // .form__btn
+
+  &__btn {
+    margin-right: 30%;
+  }
+  // .form__button
+  &__button {
+    display: flex;
+    align-items: center;
+    a {
+      color: blue;
+      text-decoration: underline;
+    }
+  }
+}
+
+.btn-top {
+}
+
+.active-rad {
+  border: 1px solid red;
+}
