@@ -263,6 +263,81 @@ h1 {
   border: 1px solid red;
 }
 
+.profile {
+  color: #fff;
+  background-color: gray;
+  margin-bottom: 50px;
+}
+.profile__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+.profile__reg {
+  display: flex;
+}
+.profile .item {
+  margin-right: 40px;
+}
+.profile .item:last-child {
+  margin-right: 0;
+}
+
+.info {
+  margin-right: 30px;
+}
+.info h2 {
+  margin-bottom: 5px;
+}
+
+.register__title {
+  font-size: 42px;
+  text-align: center;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid rgb(22, 192, 192);
+}
+.register__info {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-size: 20px;
+  margin-bottom: 15px;
+  margin-right: 25px;
+}
+
+.form-date {
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid rgb(22, 192, 192);
+  border-radius: 5px;
+  background: rgba(22, 192, 192, 0.479);
+  width: 200px;
+  padding: 5px;
+}
+
+.list1 {
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid rgb(22, 192, 192);
+  border-radius: 5px;
+  background: rgba(22, 192, 192, 0.479);
+  width: 200px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.form-control-input {
+  border: 1px solid rgb(22, 192, 192);
+  font-size: 16px;
+  width: 20%;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin-bottom: 10px;
+}
+
 .logo_img img {
   width: 62px;
   height: 62px;

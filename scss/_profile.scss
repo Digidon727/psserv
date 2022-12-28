@@ -1,0 +1,39 @@
+.profile {
+  color: #fff;
+  background-color: gray;
+  margin-bottom: 50px;
+  // .profile__menu
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  &__reg {
+    display: flex;
+  }
+  &__menu-nav {
+  }
+  .item {
+    margin-right: 40px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.logo {
+  // .logo_img
+
+  &_img {
+  }
+}
+.info {
+  margin-right: 30px;
+  h2 {
+    margin-bottom: 5px;
+  }
+}
+.btn-top {
+}
