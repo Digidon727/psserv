@@ -94,15 +94,14 @@
   display: block;
   font-size: 18px;
 }
-.btn-top {
-  padding: 10px 20px;
-  font-size: 16px;
-  color: white;
-  border: 1px solid rgb(22, 192, 192);
-  background: rgb(22, 192, 192);
+
+.alert {
+  text-align: center;
+  padding: 10px 15px;
+  border: 1px solid red;
   border-radius: 5px;
-  text-decoration: none;
-  &:hover {
-    background: rgb(8, 119, 119);
-  }
+  margin: 0 auto;
+  color: #fff;
+  background: rgba(212, 68, 68, 0.603);
+  margin-bottom: 20px;
 }

@@ -1,3 +1,16 @@
+<?php
+require_once __DIR__ . './vender2/login_if.php';
+require_once __DIR__ . './vender2/token.php';
+
+
+if(isset( $_COOKIE["token"])){
+    $user = fetchUserByToken($dbh, $_COOKIE["token"]);
+    if($user){
+        header("Location: /profile.php");
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -29,7 +42,14 @@
                 </div>
 
                 <h1>Вход в систему</h1>
-                <form action="vendor/login.php" method="post">
+                <?php if(isset($isNotAuh) && $isNotAuh ){
+                        ?>
+                <div class="alert">Неверный логин или пароль</div>
+                <?php
+                }
+               ?>
+                <form action="/login.php" method="post">
+
                     <div class="form__info">
                         <label for="email" class="form__label">Адрес электронной почты</label>
                         <input type="email" name="email" class="form__control" id="email" aria-describedby="emailHelp">
@@ -40,7 +60,8 @@
                         <input type="password" name="password" class="form__control-password-tow" id="password">
                     </div>
                     <div class="form__button">
-                        <button type="submit" class="form__btn btn-top">Авторизоваться в системе</button>
+                        <button type="submit" name="login_submit" class="form__btn btn-top">Авторизоваться в
+                            системе</button>
                     </div>
 
                 </form>

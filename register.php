@@ -1,6 +1,13 @@
 <?php
 require_once __DIR__ . './vender2/register_if.php';
+require_once __DIR__ . './vender2/token.php';
 
+if(isset( $_COOKIE["token"])){
+    $user = fetchUserByToken($dbh, $_COOKIE["token"]);
+    if($user){
+        header("Location: /profile.php");
+    }
+}
 ?>
 
 <!DOCTYPE html>
