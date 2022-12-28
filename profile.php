@@ -2,6 +2,8 @@
 require_once __DIR__ . './vender2/db.php';
 require_once __DIR__ . './vender2/token.php';
 require_once __DIR__ . './vender2/create.php';
+
+
 //выход из системы
 if(isset($_POST["logout-submit"])){
     setcookie("token", NULL);
@@ -17,6 +19,8 @@ if(isset( $_COOKIE["token"])){
 }else{
     header("Location: /login.php");
 }
+
+
 
 ?>
 
@@ -42,9 +46,9 @@ if(isset( $_COOKIE["token"])){
                     </a>
                 </div>
                 <div class="profile__menu-nav">
-                    <a class="btn-top item" href="#">Регистрация</a>
-                    <a class="btn-top item" href="#">Лист заявок</a>
-                    <a class="btn-top item" href="#">Выполненные заявки</a>
+                    <a class="btn-top item" href="./profile.php">Регистрация</a>
+                    <a class="btn-top item" href="./list.php">Лист заявок</a>
+                    <a class="btn-top item" href="./list_true.php">Выполненные заявки</a>
                 </div>
                 <div class="profile__reg">
 
@@ -68,37 +72,40 @@ if(isset( $_COOKIE["token"])){
                     <!-- Поле Дата -->
                     <div class="register__info">
                         <label for="articleTitle" class="form-label">Укажите дату заявки</label>
-                        <input type="date" value="<?= date("d/m/Y");?>" name="date_dmy" class="form-date"
-                            id="articleTitle">
+                        <input type="date" name="date_dmy" class="form-date" id="articleTitle">
                     </div>
                     <!-- Поле Статус  -->
                     <div class="register__info">
                         <label for="articleBody" class="form-label">Укажите статус</label>
-                        <input type="text" class="form-control-input" name="status_l" id="articleTitle">
+                        <!-- <input type="text" class="form-control-input" name="status_l" id="articleTitle" required> -->
+                        <select name="status_l" id="city-select" class="form-date">
+                            <option>Приняты</option>
+                            <option>Выданные</option>
+                        </select>
                     </div>
                     <!-- Поле Статус  -->
                     <div class="register__info">
                         <label for="articleBody" class="form-label">Укажите тип устройства</label>
-                        <input type="text" class="form-control-input" name="type_device" id="articleTitle">
+                        <input type="text" class="form-control-input" name="type_device" id="articleTitle" required>
                     </div>
                     <!-- Поле модель  -->
                     <div class="register__info">
                         <label for="articleBody" class="form-label">Укажите модель </label>
-                        <input type="text" class="form-control-input" name="model" id="articleTitle">
+                        <input type="text" class="form-control-input" name="model" id="articleTitle" required>
                     </div>
                     <!-- Поле Имя  -->
                     <div class="register__info">
                         <label for="articleBody" class="form-label">Имя</label>
-                        <input type="text" name="name_user" class="form-control-input" id="articleTitle">
+                        <input type="text" name="name_user" class="form-control-input" id="articleTitle" required>
                     </div>
                     <!-- Поле номер телефона -->
                     <div class="register__info">
                         <label for="articleBody" class="form-label">Номер телефона</label>
-                        <input type="text" class="form-control-input" name="phone" id="articleTitle">
+                        <input type="text" class="form-control-input" name="phone" id="articleTitle" required>
                     </div>
                     <div class="register__info">
                         <label for="articleBody" class="form-label">Мастер </label>
-                        <input type="text" name="name_master" class="form-control-input" id="articleTitle">
+                        <input type="text" name="name_master" class="form-control-input" id="articleTitle" required>
                     </div>
 
                     <div class="register__info">

@@ -338,6 +338,130 @@ h1 {
   margin-bottom: 10px;
 }
 
+.form__title {
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid rgb(22, 192, 192);
+}
+
+.responsive-tables li {
+  border-radius: 3px;
+  padding: 15px 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.responsive-tables .table-headers {
+  background: rgb(22, 192, 192);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.responsive-tables .table-row {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+.responsive-tables .table-row .table_b {
+  margin-right: 5px;
+}
+.responsive-tables .col-1 {
+  flex-basis: 3%;
+}
+.responsive-tables .col-2 {
+  flex-basis: 10%;
+}
+.responsive-tables .col-3 {
+  flex-basis: 10%;
+}
+.responsive-tables .col-4 {
+  flex-basis: 15%;
+}
+.responsive-tables .col-5 {
+  flex-basis: 10%;
+}
+.responsive-tables .col-6 {
+  flex-basis: 10%;
+}
+.responsive-tables .col-7 {
+  flex-basis: 15%;
+}
+.responsive-tables .col-8 {
+  flex-basis: 10%;
+}
+.responsive-tables .col-9 {
+  flex-basis: 10%;
+}
+.responsive-tables .col-10 {
+  flex-basis: 10%;
+}
+@media all and (max-width: 767px) {
+  .responsive-tables .table-header {
+    display: none;
+  }
+  .responsive-tables li {
+    display: block;
+  }
+  .responsive-tables .col {
+    flex-basis: 100%;
+  }
+  .responsive-tables .col {
+    display: flex;
+    padding: 5px 0;
+  }
+  .responsive-tables .col:before {
+    color: #6c7a89;
+    padding-right: 10px;
+    content: attr(data-label);
+    flex-basis: 50%;
+    text-align: right;
+  }
+}
+
+.form__list-z {
+  width: 700px;
+  margin: 0 auto;
+  justify-content: center;
+  border: 1px solid rgb(22, 192, 192);
+  background: rgba(22, 192, 192, 0.212);
+  border-radius: 5px;
+  padding: 50px;
+}
+
+.form__title-s-red {
+  color: red;
+}
+
+.form-info-b {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.form-info-list {
+  font-weight: 700;
+  margin-right: 20px;
+}
+
+.form-info-list-p {
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.error-404 {
+  font-size: 400px;
+  color: rgb(22, 192, 192);
+}
+
+.error-text {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  color: rgb(22, 192, 192);
+}
+
 .logo_img img {
   width: 62px;
   height: 62px;

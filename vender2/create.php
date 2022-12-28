@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . './../vender2/db.php';
 
+
 if(isset($_POST["profile_submit"])){ 
 
 $date_dmy = $_POST["date_dmy"];
@@ -30,6 +31,12 @@ $params = [
 ];
 $prepare = $dbh->prepare($sql);
 $prepare->execute($params);
+
+
+//Ошибка тут 
+// $lastId = $dbh->lastInsertId();
+// echo $lastId;
+// header("Location: /list_info.php?=$lastId ");
 
 header("Location: /list.php");
 }

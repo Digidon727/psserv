@@ -62,7 +62,7 @@ if(isset( $_COOKIE["token"])){
     <section class="form-list">
         <div class="container">
             <div>
-                <h1 class="form__title">Лист активных заявок </h1>
+                <h1 class="form__title">Лист выполненных заявок </h1>
             </div>
 
             <div>
@@ -84,7 +84,7 @@ if(isset( $_COOKIE["token"])){
                     $articles = $dbh->query("SELECT * FROM `user_register`")->fetchAll(PDO::FETCH_ASSOC);
                     foreach($articles as $article){
                         $article["is_public"];
-                        if($article["is_public"] == 0){
+                        if($article["is_public"] == 1){
                             continue;
                             
                         }
