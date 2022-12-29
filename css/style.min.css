@@ -125,7 +125,7 @@ body {
 }
 
 .container {
-  max-width: 1470px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -415,6 +415,9 @@ h1 {
 }
 .responsive-tables .col-10 {
   flex-basis: 10%;
+}
+.responsive-tables .headers-9 {
+  margin-right: -10%;
 }
 @media all and (max-width: 767px) {
   .responsive-tables .table-header {

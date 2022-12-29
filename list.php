@@ -73,25 +73,25 @@ if(isset( $_COOKIE["token"])){
                 </div>
             </div>
 
-        </div>
 
 
-        <div>
-            <ul class="responsive-tables">
-                <li class="table-headers">
-                    <div class="col col-1">№</div>
-                    <div class="col col-2">Дата</div>
-                    <div class="col col-3">Статус</div>
-                    <div class="col col-4">Тип устройства </div>
-                    <div class="col col-5">Модель</div>
-                    <div class="col col-6">Имя</div>
-                    <div class="col col-7">Номер телефона </div>
-                    <div class="col col-8">Мастер</div>
-                    <div class="col col-9"></div>
-                    <div class="col col-10"></div>
-                </li>
 
-                <?php
+            <div>
+                <ul class="responsive-tables">
+                    <li class="table-headers">
+                        <div class="col col-1">№</div>
+                        <div class="col col-2">Дата</div>
+                        <div class="col col-3">Статус</div>
+                        <div class="col col-4">Тип устройства </div>
+                        <div class="col col-5">Модель</div>
+                        <div class="col col-6">Имя</div>
+                        <div class="col col-7">Номер телефона </div>
+                        <div class="col col-8">Мастер</div>
+                        <div class="col col-9"></div>
+                        <div class="col col-10"></div>
+                    </li>
+
+                    <?php
                     $articles = $dbh->query("SELECT * FROM `user_register`")->fetchAll(PDO::FETCH_ASSOC);
                     foreach($articles as $article){
                         $article["is_public"];
@@ -100,28 +100,28 @@ if(isset( $_COOKIE["token"])){
                             
                         }
                        ?>
-                <li class="table-row">
-                    <div class="col col-1" data-label="Job Id"><?= $article["id"]?></div>
-                    <div class="col col-2" data-label="Customer Name"><?= $article["date"]?></div>
-                    <div class="col col-3" data-label="Amount"><?= $article["status"]?></div>
-                    <div class="col col-4" data-label="Payment Status"><?= $article["device_type"]?></div>
-                    <div class="col col-5" data-label="Amount"><?= $article["model"]?></div>
-                    <div class="col col-6" data-label="Payment Status"><?= $article["name"]?></div>
-                    <div class="col col-7" data-label="Amount"><?= $article["phone"]?></div>
-                    <div class="col col-8" data-label="Payment Status"><?= $article["master"]?></div>
-                    <div class="col col-9" data-label="Payment Status"><a href="./list_info.php?id=<?=$article["id"]?>"
-                            class="btn-top table_b">Подробней</a>
-                    </div>
-                    <div class="col col-10" data-label="Payment Status"><a href="./list_edit.php?id=<?=$article["id"]?>"
-                            class="btn-top">Изменить </a>
-                    </div>
+                    <li class="table-row">
+                        <div class="col col-1" data-label="Job Id"><?= $article["id"]?></div>
+                        <div class="col col-2" data-label="Customer Name"><?= $article["date"]?></div>
+                        <div class="col col-3" data-label="Amount"><?= $article["status"]?></div>
+                        <div class="col col-4" data-label="Payment Status"><?= $article["device_type"]?></div>
+                        <div class="col col-5" data-label="Amount"><?= $article["model"]?></div>
+                        <div class="col col-6" data-label="Payment Status"><?= $article["name"]?></div>
+                        <div class="col col-7" data-label="Amount"><?= $article["phone"]?></div>
+                        <div class="col col-8" data-label="Payment Status"><?= $article["master"]?></div>
+                        <div class="col col-9" data-label="Payment Status"><a
+                                href="./list_info.php?id=<?=$article["id"]?>" class="btn-top table_b">Подробней</a>
+                        </div>
+                        <div class="col col-10" data-label="Payment Status"><a
+                                href="./list_edit.php?id=<?=$article["id"]?>" class="btn-top">Изменить </a>
+                        </div>
 
-                </li>
-                <?php
+                    </li>
+                    <?php
                     }
                     
                     ?>
-                <!-- <li class="table-row">
+                    <!-- <li class="table-row">
                         <div class="col col-1" data-label="Job Id">1</div>
                         <div class="col col-2" data-label="Customer Name">28.12.2022</div>
                         <div class="col col-3" data-label="Amount">Принят</div>
@@ -137,7 +137,8 @@ if(isset( $_COOKIE["token"])){
                         </div>
 
                     </li> -->
-            </ul>
+                </ul>
+            </div>
         </div>
         </div>
     </section>
