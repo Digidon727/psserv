@@ -131,7 +131,7 @@ body {
 }
 
 h1 {
-  text-align: center;
+  text-align: start;
   font-size: 42px;
   font-weight: 700;
 }
@@ -342,10 +342,27 @@ h1 {
   margin-bottom: 10px;
 }
 
-.form__title {
+.form__title-search {
   padding-bottom: 20px;
   margin-bottom: 50px;
   border-bottom: 1px solid rgb(22, 192, 192);
+}
+
+.form-search-inp {
+  display: flex;
+}
+
+.form__title-search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-inp1 {
+  border: 1px solid rgb(22, 192, 192);
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-right: 20px;
 }
 
 .responsive-tables li {
