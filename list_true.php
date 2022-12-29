@@ -101,7 +101,8 @@ if(isset( $_COOKIE["token"])){
                         <div class="col col-9" data-label="Payment Status"><a
                                 href="./list_info.php?id=<?=$article["id"]?>" class="btn-top table_b">Подробней</a>
                         </div>
-                        <div class="col col-10" data-label="Payment Status"><a href="#" class="btn-top">Изменить </a>
+                        <div class="col col-10" data-label="Payment Status"><a
+                                href="./list_edit.php?id=<?=$article["id"]?>" class="btn-top">Изменить </a>
                         </div>
 
                     </li>

@@ -42,7 +42,7 @@ if(isset( $_COOKIE["token"])){
                 <div class="profile__menu-nav">
                     <a class="btn-top item" href="./profile.php">Регистрация</a>
                     <a class="btn-top item" href="./list.php">Лист заявок</a>
-                    <a class="btn-top item" href="#">Выполненные заявки</a>
+                    <a class="btn-top item" href="./list_true.php">Выполненные заявки</a>
                 </div>
                 <div class="profile__reg">
 
@@ -105,7 +105,7 @@ if(isset( $_COOKIE["token"])){
                     <p class="form-info-list-p"><?= $info["phone"]?></p>
                 </div>
                 <div class="form-info-b">
-                    <h3 class="form-info-list">Выполняет ремонт страдник организации: </h3>
+                    <h3 class="form-info-list">Выполняет ремонт: </h3>
                     <p class="form-info-list-p"><?= $info["master"]?></p>
                 </div>
 
