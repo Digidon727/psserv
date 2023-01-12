@@ -76,10 +76,16 @@ if(isset( $_COOKIE["token"])){
             <div>
                 <div id="results">
                     <?php
-                    if (isset($_POST["search"])) {
-                        $stmt = $dbh->prepare("SELECT * FROM `user_register` WHERE `id` LIKE ? OR `name` LIKE ? OR `phone` LIKE ?");
-                        $stmt->execute(["%".$_POST["search"]."%", "%".$_POST["search"]."%", "%".$_POST["search"]."%"]);
-                        $results = $stmt->fetchAll();
+                    $search =$_POST["search"];
+                    if (isset($search)){
+                        $sql = "SELECT `id`, `name`, `phone` FROM `user_register` WHERE `id` = :search OR `name` = :search OR `phone` = :search  ";
+                        $params = ['search' => $search];
+                        $fetchSearch = $dbh->prepare($sql);
+                        $fetchSearch->execute($params);
+                        $results = $fetchSearch->fetchAll();
+                        // $stmt = $dbh->prepare("SELECT `id`, `name`, `phone` FROM `user_register` WHERE `id` = $search ");
+                        // $stmt->execute(["%".$search."%", "%".$search."%", "%".$search."%"]);
+                        // $results = $stmt->fetchAll();
                         
                     if (count($results) > 0) { foreach ($results as $r) {
                         ?>
